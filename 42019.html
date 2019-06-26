@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="42019.css">
+</head>
+<body>
+    <div class="all-boxes">
+        <div class="margin">
+            <div class="top-boxs">
+                <button id="buttonAfterRed" class="button-red" onclick="mySetTimeout('red', 'buttonAfterRed')"></button>
+                <br>
+                <button id="buttonAfterGreen" class="button-green" onclick="mySetTimeout('green', 'buttonAfterGreen')"></button>
+            </div>
+            <div class="bottom-box">
+                    <button id="buttonAfterYellow" class="button-yellow" onclick="mySetTimeout('yellow', 'buttonAfterYellow')"></button>
+                    <br>
+                <button id="buttonAfterBlue" class="button-blue" onclick="mySetTimeout('blue', 'buttonAfterBlue')"></button>
+
+                <script>
+                function mySetTimeout(color, id) {
+                    document.getElementById(id).style.background = color;
+                    setTimeout(function() {myFunction(id)}, 2000);
+                }
+                function myFunction(id) {
+                    document.getElementById(id).style.background = 'white';
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
